@@ -113,6 +113,10 @@ svg{
         display: none;
     }
 
+    .mainMenu li{
+        display: none;
+    }
+
     img {
         width: 150px;
         height: 36.67px;
