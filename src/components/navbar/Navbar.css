@@ -73,8 +73,9 @@ svg{
     align-items: center;
     padding: 30px;
     color: #fff;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
+    display: none;
 }
 
 .sideMenu ul{
@@ -116,4 +117,9 @@ svg{
         width: 150px;
         height: 36.67px;
     }
+
+    .sideMenu{
+        display: flex;
+    }
+
 }
