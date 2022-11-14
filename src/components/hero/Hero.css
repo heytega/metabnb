@@ -5,12 +5,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
- margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .content{
     max-width: 670px;
-    /* height: 100%; */
 }
 
 .content .hero-header{
@@ -36,8 +35,14 @@
     margin-bottom: 40px;
 }
 
+
+.form-control{
+    width: 95%;
+}
+
 input{
-    width: 390px;
+    /* width: 390px; */
+    width: 62%;
     height: 54px;
     background-color: #fff;
     outline: none;
@@ -51,7 +56,8 @@ input{
 }
 
 #search-button{
-    width: 230px;
+    /* width: 230px; */
+    width: 38%;
     height: 54px;
     background: var(--purple-color);
     color: #fff;
@@ -94,10 +100,68 @@ input{
     height: 176px;
 }
 
+@media(max-width: 1280px) {
+    .hero-grid {
+        width: 90%;
+    }
+
+    .content{
+        max-width: 620px;
+    }
+
+    .content .hero-header{
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 78.4px;
+        color: var(--black-color);
+        margin-bottom: 30px;
+    }
+
+    .content p{
+        font-size: 22px;
+        line-height: 33px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 1240px){
+
+    .images{
+        width: 40%;
+    }
+
+    .content {
+        
+       width: 550px;
+    }
+
+    .content .hero-header {
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 78.4px;
+        color: var(--black-color);
+        margin-bottom: 30px;
+    }
+
+    .image-grid{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .image-grid img {
+        /* width: 231px; */
+        width: 95%;
+        height: 100%;
+        margin: auto;
+        height: 176px;
+    }
+}
+
+
 @media(max-width: 1000px){
     .hero-grid{
         width: 90%;
-        
+        flex-direction: column;
     }
 
     /* .content{
@@ -105,5 +169,25 @@ input{
       flex-direction: column;
       flex-wrap: wrap;
     } */
+}
+
+@media(max-width: 450px){
+    .images{
+        width: 100vw;
+    }
+    .image-grid{
+        width: 90%;
+        margin: auto;
+        /* gap: none; */
+        align-items: center;
+        grid-template-areas:
+        'image-1 image-1'
+        'image-2 image-2'
+        'image-3 image-3'
+        'image-4 image-4';
+    }
+    .image-grid img{
+        width: 100%;
+    }
 }
 
