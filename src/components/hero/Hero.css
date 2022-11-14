@@ -188,6 +188,10 @@ input{
         flex-direction: column;
     }
 
+    .form-control{
+        width: 100%;
+    }
+
     .images{
         width: 100%;
         display: flex;
