@@ -49,12 +49,14 @@ a {
     display: inline-block;
     cursor: pointer;
     color: #fff;
+    font-family: 'Red Rose', cursive;
 }
 
 .menu-button {
     background: transparent;
     border: none;
     display: none;
+    color: var(--black-color);
 }
 
 svg{
