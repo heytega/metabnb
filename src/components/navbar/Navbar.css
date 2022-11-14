@@ -143,3 +143,9 @@ svg{
         width: 100%;
     }
 }
+
+@media(max-width: 1000px){
+    .navbar-container{
+        margin-bottom: 50px;
+    }
+}

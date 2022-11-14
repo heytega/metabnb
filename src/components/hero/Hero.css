@@ -41,7 +41,6 @@
 }
 
 input{
-    /* width: 390px; */
     width: 62%;
     height: 54px;
     background-color: #fff;
@@ -56,7 +55,6 @@ input{
 }
 
 #search-button{
-    /* width: 230px; */
     width: 38%;
     height: 54px;
     background: var(--purple-color);
@@ -98,6 +96,7 @@ input{
 .image-grid img{
     width: 234px;
     height: 176px;
+    border-radius: 15px;
 }
 
 @media(max-width: 1280px) {
@@ -110,10 +109,8 @@ input{
     }
 
     .content .hero-header{
-        font-weight: 400;
         font-size: 50px;
         line-height: 78.4px;
-        color: var(--black-color);
         margin-bottom: 30px;
     }
 
@@ -127,20 +124,22 @@ input{
 @media(max-width: 1240px){
 
     .images{
-        width: 40%;
+        width: 45%;
     }
 
-    .content {
-        
-       width: 550px;
+    .content { 
+       width: 55%;
     }
 
     .content .hero-header {
-        font-weight: 400;
-        font-size: 50px;
-        line-height: 78.4px;
-        color: var(--black-color);
-        margin-bottom: 30px;
+        font-size: 45px;
+        line-height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .image-grid{
@@ -149,11 +148,36 @@ input{
     }
 
     .image-grid img {
-        /* width: 231px; */
         width: 95%;
         height: 100%;
         margin: auto;
-        height: 176px;
+    }
+}
+
+@media(max-width: 1150px){
+
+    .images{
+        width: 50%;
+    }
+    
+    .content{
+        width: 50%;
+    } 
+
+    .content .hero-header {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 1060px){
+    .images{
+        width: 47%;
+    }
+
+    .content{
+        width: 52%;
     }
 }
 
@@ -164,30 +188,24 @@ input{
         flex-direction: column;
     }
 
-    /* .content{
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-    } */
-}
-
-@media(max-width: 450px){
     .images{
-        width: 100vw;
+        width: 100%;
+        display: flex;
     }
-    .image-grid{
-        width: 90%;
-        margin: auto;
-        /* gap: none; */
-        align-items: center;
-        grid-template-areas:
-        'image-1 image-1'
-        'image-2 image-2'
-        'image-3 image-3'
-        'image-4 image-4';
+
+    .content{
+        width: 100%;
+        margin-bottom: 50px;
     }
-    .image-grid img{
+    
+    .content p{
         width: 100%;
     }
-}
 
+    .content .hero-header{
+        width: 100%;
+        font-size: 35px;
+        line-height: 45px;
+        margin-bottom: 20px;
+    }
+}
