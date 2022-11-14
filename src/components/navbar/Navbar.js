@@ -14,7 +14,7 @@ const Navbar = () => {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">Place to stay</a>
+            <a href="/placetobe">Place to stay</a>
           </li>
           <li>
             <a href="#">NFTs</a>
@@ -62,10 +62,10 @@ const Navbar = () => {
         <div className="sideMenu">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">Place to stay</a>
+              <a href="/placetobe">Place to stay</a>
             </li>
             <li>
               <a href="#">NFTs</a>

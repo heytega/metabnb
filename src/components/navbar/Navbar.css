@@ -1,10 +1,11 @@
 .navbar-container{
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
     font-size: 20px;
     font-weight: 400;
     line-height: 24.98px;
     position: relative;
+    margin-bottom: 80px;
 }
 
 .navbar{
@@ -33,7 +34,7 @@ img {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: var(--black-color);
 }
 
 
@@ -43,7 +44,7 @@ a {
     border-radius: 10px;
     font-size: 16px;
     line-height: 19.98px;
-    background: linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%);
+    background: var(--purple-color);
     border: none;
     display: inline-block;
     cursor: pointer;
@@ -101,6 +102,11 @@ svg{
 
 
 @media(max-width: 950px){
+
+    .navbar{
+        width: 90%;
+    }
+    
     .menu-button{
         display: inline-block;
     }
@@ -109,9 +115,9 @@ svg{
         display: none;
     }
 
-    .mainMenu ul{
+    /* .mainMenu ul{
         display: none;
-    }
+    } */
 
     .mainMenu li{
         display: none;
@@ -125,5 +131,11 @@ svg{
     .sideMenu{
         display: flex;
     }
+    .sideMenu a{
+        width: 100%;
+    }
 
+    .sideMenu button{
+        width: 100%;
+    }
 }

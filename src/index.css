@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --purple-color: linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%);
+  --black-color: #434343;
+  --grey-color: #A3A3A3;
+}
 
 *{
   padding: 0;
@@ -13,7 +18,7 @@ font-family: 'Red Rose', cursive;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
