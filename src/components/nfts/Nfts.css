@@ -1,0 +1,128 @@
+.nfts-container{
+   width: 100%;
+   background: var(--purple-color);
+}
+
+.flex-container{
+    width: 90%;
+    height: 740px;
+    margin: auto;
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container .content h2{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59.95px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.flex-container .content p {
+    font-weight: 400;
+    width: 415px;
+    font-size: 18px;
+    line-height: 35px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.flex-container .content button{
+    font-family: 'Red Rose', cursive;
+    font-size: 16px;
+    line-height: 19.2px;
+    border: none;
+    background: #fff;
+    color: #A02279;
+    width: 156px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.image{
+    height: 80%;
+}
+
+.image img{
+    width: 704px;
+    height: 100%;
+}
+
+@media(max-width: 1260px){
+
+    .flex-container .content{
+        width: 40%;
+    }
+
+    .image{
+        width: 55%;
+        height: 100%;
+    }
+    
+    .image img{
+        width:100%;
+    }
+
+    .flex-container{
+        height: 650px;
+    }
+
+    .flex-container .content p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 45px;
+    }
+}
+
+@media(max-width: 1000px){
+    .flex-container{
+        flex-direction: column;
+        width: 90%;
+        height: unset;
+        padding: 50px 0;
+    }
+
+    .flex-container .content {
+        width: 100%;
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+    }
+
+    .flex-container .image{
+        width: 80%;
+        align-self: flex-end;
+    }
+}
+
+@media(max-width: 750px){
+    .flex-container .image{
+        width: 100%;
+    }
+
+    .flex-container .content {
+        align-self: center;
+    }
+}
+
+@media(max-width: 700px){
+    .flex-container .content h2 {
+        font-size: 35px;
+        margin-bottom: 14px ;
+    }
+
+    .flex-container .content p {
+        margin-bottom: 30px;
+        line-height: 25px;
+    }
+
+    .flex-container .content button {
+        font-size: 16px;
+        width: 140px;
+        height: 42px;
+    }
+}
