@@ -3,6 +3,7 @@ import "./placetobe.css";
 import Grid from "../../components/grid-section/Grid";
 import Data from "../../placetobeData";
 import setting from "../../images/place images/setting-5.svg";
+import select from "../../images/place images/select.svg";
 
 const Placetobe = () => {
   return (
@@ -18,7 +19,11 @@ const Placetobe = () => {
           <li>Off-grid</li>
           <li>Farm</li>
         </ul>
-        <div className="filter">
+        <div className="filter select-menu">
+          <p>Restaurant</p>
+          <img src={select} alt="" />
+        </div>
+        <div className="filter set-filter">
           <p>Location</p>
           <img src={setting} alt="" />
         </div>

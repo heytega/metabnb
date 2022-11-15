@@ -17,7 +17,6 @@
 .submenu-container .submenu{
     color: #434343;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -29,7 +28,6 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24.98px;
-    /* margin: 0 20px; */
     cursor: pointer;
 }
 
@@ -55,4 +53,27 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+}
+
+.select-menu{
+    display: none;
+}
+
+@media(max-width:1000px){
+    .submenu-container {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 40px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+    }
+
+    .select-menu{
+        display: flex;
+    }
+    
+    .submenu-container .submenu{
+        display: none;
+    }
 }
