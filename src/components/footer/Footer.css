@@ -1,0 +1,115 @@
+
+.footer-container{
+    background: #1D1D1E;
+    color: #fff;
+}
+
+.footer-container a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-container ul{
+    list-style-type: none;
+}
+
+.footer-container ul h2{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.footer-container ul li{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 35px;
+    color: #F1F3F9;
+}
+
+.logo-container .main-logo{
+    width: 233px;
+    height: 40px;
+    color: #F7F7F7; 
+    margin-bottom: 80px;
+}
+
+.logo-container .social-container{
+    display: flex;
+    flex-direction: row;
+    width: 116.5px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.logo-container p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.logo-container span{
+   font-size: 19px;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-container .grid-container{
+    max-width: 87%;
+    margin: auto;
+    padding: 50px 55px 20px 0;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.facebook, .instagram, .twitter {
+    width: 18px;
+    height: 18px;
+    color: #F7F7F7;
+}
+
+@media(max-width: 1100px){
+    .footer-container .grid-container{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 50px 0px 20px 0;
+    }
+
+    .list-container{
+        margin-bottom: 30px;
+    }
+
+    .logo-container{
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        line-height: 80px;
+        gap: 12px;
+    }
+
+    .logo-container .main-logo {
+        width: 200px;
+        height: 30px;
+        margin-bottom: unset;
+    }
+
+    .logo-container .social-container {
+        margin-bottom: unset;
+        align-items: center;
+    }
+}
+
+@media(max-width: 500px){
+    .logo-container .main-logo{
+        width: 130px;
+        height: 20px;
+    }
+
+    .footer-container .grid-container{
+        width: 90%;
+    }
+}
