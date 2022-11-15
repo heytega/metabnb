@@ -1,0 +1,94 @@
+.showcase-container {
+    width: 100%;
+}
+
+.logo-section{
+    max-width: 1440px;
+    margin: auto;
+    height: 70px;
+    padding: 10px 100px 10px 100px;
+    background: var(--purple-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.showcase-header{
+    max-width: 817px;
+    margin: auto;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59.95px;
+    margin-bottom: 30px;
+}
+
+.grid-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 95%;
+    margin: auto;
+    row-gap: 30px;
+}
+
+@media(max-width: 1270px){
+    .grid-section{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .showcase-header{
+        font-size: 43px;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+@media(max-width: 960px){
+    .grid-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .showcase-header{
+        font-size: 35px;
+        width: 90%;
+    }
+}
+
+@media(max-width: 650px){
+    .grid-section{
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-header{
+        font-size: 25px;
+    
+    }
+}
+
+@media(max-width: 750px){
+    .logo-section{
+        padding: 10px 25px;
+    }
+}
+
+@media(max-width: 500px){
+    .logo-section{
+        padding: 10px;
+    }
+
+    .logo-section img{
+        width: 115px;
+    }
+}
+
+@media(max-width: 360px){
+
+    .logo-section{
+        padding: 10px 5px;
+    }
+
+    .logo-section img{
+        width: 100px;
+    }
+}
