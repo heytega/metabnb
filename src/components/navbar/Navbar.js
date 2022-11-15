@@ -1,10 +1,38 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import Logo from "../../images/logo.svg";
-// import Button from "../button/Button";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+  //  FUNCTION TO HANDLE CLOSE ACTION ON SIDEDRAWER/MODAL
+  const hideSideBar = () => {
+    setOpenMenu(false);
+
+    // Unsets Background Scrolling to use when SideDrawer/Modal is closed
+    document.body.style.overflow = "unset";
+  };
+
+  // FUNCTION TO HANDLE OPEN ACTION ON SIDEDRAWER/MODAL
+  const showSideBar = () => {
+    setOpenMenu(true);
+
+    // Disables Background Scrolling whilst the SideDrawer/Modal is open
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  // FUNCTION THAT HANDLES THE SIDEMENU ONCLICK ACTION
+  const handleSideBar = () => {
+    if (openMenu) {
+      hideSideBar();
+    }
+    if (!openMenu) {
+      showSideBar();
+    }
+  };
+
   return (
     <header className="navbar-container">
       <div className="navbar">
@@ -27,7 +55,7 @@ const Navbar = () => {
           <button className="button">Connect wallet</button>
         </a>
 
-        <button className="menu-button" onClick={() => setOpenMenu(!openMenu)}>
+        <button className="menu-button" onClick={handleSideBar}>
           {!openMenu ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
