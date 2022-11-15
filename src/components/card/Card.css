@@ -85,3 +85,45 @@
 .off{
     color: #ccc;
 }
+
+@media(max-width: 550px){
+    .card-container{
+        width: 90%;
+        height: 375px;
+    }
+
+    .image-container{
+        width: 90%;
+        height: 75%;
+        margin-bottom: ;
+    }
+
+    .name-container{
+        width: 90%;
+    }
+
+    .avail-container{
+        width: 90%;
+    }
+
+    .rating{
+        width: 90%;
+    }
+
+    .name,
+    .price,
+    .distance,
+    .available {
+        line-height: 13.9px;
+    }
+}
+
+@media(max-width: 320px){
+    .name,
+    .price,
+    .distance,
+    .available {
+        font-size: 12px;
+        line-height: 13.9px;
+    }
+}

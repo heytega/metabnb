@@ -39,7 +39,7 @@ const Navbar = () => {
         <img src={Logo} alt="logo" />
         <ul className="mainMenu">
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="/placetobe">Place to stay</a>
