@@ -44,6 +44,7 @@ a {
     border-radius: 10px;
     font-size: 16px;
     line-height: 19.98px;
+    outline: none;
     background: var(--purple-color);
     border: none;
     display: inline-block;
@@ -122,10 +123,6 @@ svg{
     .menu-connect-wallet {
         display: none;
     }
-
-    /* .mainMenu ul{
-        display: none;
-    } */
 
     .mainMenu li{
         display: none;

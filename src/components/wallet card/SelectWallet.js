@@ -4,14 +4,14 @@ import metamask from "../../images/wallet images/metamask.svg";
 import chevron from "../../images/wallet images/chevron.svg";
 import walletconnect from "../../images/wallet images/walletconnect.svg";
 
-const SelectWallet = () => {
+const SelectWallet = ({ hideWalletModal }) => {
   return (
     <div className="connect-wallet-modal">
       <div className="select-prompt">
         <div className="horizon-rule">
           <div className="header">
             <h3>Connect Wallet</h3>
-            <button>
+            <button onClick={() => hideWalletModal()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"

@@ -7,19 +7,31 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [connectWallet, setConnectWallet] = useState(false);
 
-  //  FUNCTION TO HANDLE CLOSE ACTION ON SIDEDRAWER/MODAL
-  const hideSideBar = () => {
-    setOpenMenu(false);
+  // FUNCTION TO OPEN WALLET MODAL
+  const showWalletModal = () => {
+    setConnectWallet(true);
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    }
+  };
 
-    // Unsets Background Scrolling to use when SideDrawer/Modal is closed
+  // FUNCTION TO CLOSE HIDE WALLET MODAL
+  const hideWalletModal = () => {
+    setConnectWallet(false);
     document.body.style.overflow = "unset";
   };
 
-  // FUNCTION TO HANDLE OPEN ACTION ON SIDEDRAWER/MODAL
+  //  FUNCTION TO HIDE SIDBAR
+  const hideSideBar = () => {
+    setOpenMenu(false);
+
+    document.body.style.overflow = "unset";
+  };
+
+  // FUNCTION TO OPEN SIDEBAR
   const showSideBar = () => {
     setOpenMenu(true);
 
-    // Disables Background Scrolling whilst the SideDrawer/Modal is open
     if (typeof window != "undefined" && window.document) {
       document.body.style.overflow = "hidden";
     }
@@ -53,9 +65,13 @@ const Navbar = () => {
             <a href="#">Community</a>
           </li>
         </ul>
-        <a href="#" className="menu-connect-wallet">
-          <button className="button">Connect wallet</button>
-        </a>
+
+        <button
+          onClick={() => showWalletModal()}
+          className="button menu-connect-wallet"
+        >
+          Connect wallet
+        </button>
 
         <button className="menu-button" onClick={handleSideBar}>
           {!openMenu ? (
@@ -104,13 +120,14 @@ const Navbar = () => {
               <a href="#">Community</a>
             </li>
           </ul>
-          <a href="#" className="connect-wallet">
-            <button className="button">Connect wallet</button>
-          </a>
+
+          <button onClick={() => showWalletModal()} className="button">
+            Connect wallet
+          </button>
         </div>
       )}
 
-      {connectWallet && <SelectWallet />}
+      {connectWallet && <SelectWallet hideWalletModal={hideWalletModal} />}
     </header>
   );
 };
