@@ -2,6 +2,19 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import Logo from "../../images/logo.svg";
 import SelectWallet from "../wallet card/SelectWallet";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    x: "250vw",
+  },
+  visible: {
+    opacity: 1,
+    x: "0",
+    transition: { type: "tween", duration: 0.4 },
+  },
+};
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -105,7 +118,12 @@ const Navbar = () => {
       </div>
 
       {openMenu && (
-        <div className="sideMenu">
+        <motion.div
+          className="sideMenu"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <ul>
             <li>
               <a href="/">Home</a>
@@ -124,7 +142,7 @@ const Navbar = () => {
           <button onClick={() => showWalletModal()} className="button">
             Connect wallet
           </button>
-        </div>
+        </motion.div>
       )}
 
       {connectWallet && <SelectWallet hideWalletModal={hideWalletModal} />}
