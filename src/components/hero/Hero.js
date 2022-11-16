@@ -42,10 +42,10 @@ const Hero = () => {
       </div>
       <div className="images">
         <div className="image-grid">
-          <img src={Image1} alt="" className="image-1" />
-          <img src={Image2} alt="" className="image-2" />
-          <img src={Image3} alt="" className="image-3" />
-          <img src={Image4} alt="" className="image-4" />
+          <img data-aos="fade-down" src={Image1} alt="" className="image-1" />
+          <img data-aos="fade-left" src={Image2} alt="" className="image-2" />
+          <img data-aos="fade-right" src={Image3} alt="" className="image-3" />
+          <img data-aos="fade-up" src={Image4} alt="" className="image-4" />
         </div>
       </div>
     </section>
