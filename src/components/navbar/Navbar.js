@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import Logo from "../../images/logo.svg";
+import SelectWallet from "../wallet card/SelectWallet";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [connectWallet, setConnectWallet] = useState(false);
 
   //  FUNCTION TO HANDLE CLOSE ACTION ON SIDEDRAWER/MODAL
   const hideSideBar = () => {
@@ -107,6 +109,8 @@ const Navbar = () => {
           </a>
         </div>
       )}
+
+      {connectWallet && <SelectWallet />}
     </header>
   );
 };
