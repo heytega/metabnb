@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./Card.css";
 
 const Card = ({ card, id }) => {
   const [like, setLike] = useState(false);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
-    <section key={id} className="card-container">
+    <section data-aos="fade-up" key={id} className="card-container">
       <div className="image-container">
         <img src={card.image} alt="" />
         <button className="heart" onClick={() => setLike(!like)}>

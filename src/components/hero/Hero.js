@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Hero.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Image1 from "../../images/hero images/2.png";
 import Image2 from "../../images/hero images/1.png";
 import Image3 from "../../images/hero images/4.png";
 import Image4 from "../../images/hero images/3.png";
 
 const Hero = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <section className="hero-grid">
       <div className="content">
@@ -38,8 +44,8 @@ const Hero = () => {
         <div className="image-grid">
           <img src={Image1} alt="" className="image-1" />
           <img src={Image2} alt="" className="image-2" />
-          <img src={Image3} alt="" className="image-3" />
-          <img src={Image4} alt="" className="image-4" />
+          <img data-aos="fade-up" src={Image3} alt="" className="image-3" />
+          <img data-aos="fade-right" src={Image4} alt="" className="image-4" />
         </div>
       </div>
     </section>
