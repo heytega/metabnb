@@ -24,7 +24,7 @@ This is a solution to stage 3 HNG internship frontend task [MetaBNB](https://www
 
 ### Links
 
-- Live Site URL: [Live site URL here](https://linkforest-three.vercel.app/)
+- Live Site URL: [Live site URL here](https://hng-metabnb.vercel.app/)
 
 ### Built with
 
