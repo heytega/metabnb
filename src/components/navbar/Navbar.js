@@ -34,6 +34,12 @@ const Navbar = () => {
     document.body.style.overflow = "unset";
   };
 
+  // FUNCTION TO HANDLE CONNECT WALLET ON THE SIDE BAR:
+  const sideMenuWalletConnect = () => {
+    hideSideBar();
+    showWalletModal();
+  };
+
   //  FUNCTION TO HIDE SIDBAR
   const hideSideBar = () => {
     setOpenMenu(false);
@@ -139,7 +145,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <button onClick={() => showWalletModal()} className="button">
+          <button onClick={() => sideMenuWalletConnect()} className="button">
             Connect wallet
           </button>
         </motion.div>
